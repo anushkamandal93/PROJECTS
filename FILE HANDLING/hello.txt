@@ -1,0 +1,43 @@
+file=open('list.py')
+print(file.read())
+file.close()
+file=open('gangadhar.txt','w')
+file.write('this is Gangadhar file')
+#overwriting of data
+file.write('this content is overwritten now')
+file.close()
+
+#if data needed to be added at last
+file=open('gangadhar.txt','a')
+file.write('this content is added using (append) mode')
+file.close()
+
+#data reading 
+file=open('gangadhar.txt','r')
+print(file.read())
+
+#line by line reading 
+file=open('gangadhar.txt','r')
+for i in file:
+    print(i)
+file.close()
+
+with open('gangadhar.txt','r') as file:
+     print(file.read())
+   
+with open('gangadhar.txt','w') as file:
+file.write('the content is overwritten')
+     print('DONE')
+
+"""O/P :- the content is overwritten
+           DONE"""
+     
+# copied path (C:\users\anush\desktop\new folder\gangadhar.txt)
+from pathib import Path
+p=Path('shaktiman.txt')
+if p.exist():
+    print('file exists')
+else:
+    print('file does not exist')
+ 
+0/P:- file exists
